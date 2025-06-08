@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #000000;
+}
+
+.hero-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("covid.jpg") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Si prefieres un tinte oscuro, puedes usar algo como rgba(0,0,0,0.2) */
+  z-index: 1;
+}
+
+/*caja blanca */
+
+
+/* titulo */
+.cover-box h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #ffffff; 
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Subrayar “COVID-19” con azul celeste */
+.cover-box .highlight {
+  color: #0539b1; 
+}
+
+/* linea */
+.cover-box hr {
+  border: none;
+  height: 1px;
+  background-color: #cccccc;
+  margin: 1rem auto;
+  width: 80%;
+  display:none;
+}
+
+/* subtitulo */
+.cover-box h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: #ffffff; 
+  font-weight: 400;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.cover-box h3{
+  font-size: 1rem;
+  line-height: 1.3;
+  color: #ffffff; 
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+/* =============== Texto secundario (opcional) =============== */
+.cover-box p {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* =============== Responsive: ajustes para pantallas más pequeñas =============== */
+@media (max-width: 768px) {
+  .cover-box {
+    width: 80vw;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .cover-box h1 {
+    font-size: 2rem;
+  }
+
+  .cover-box h2 {
+    font-size: 1.25rem;
+  }
+}
+
+header {
+  background: #ffffff;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('covid.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  position: relative;
+}
+h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.header h1 {
+  position: absolute;
+  top: 45px;
+  left: 690px;
+  color: white;
+  font-size: 2.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  z-index: 10;
+  line-height: 1.5;
+}
+
+#intro-completo {
+  text-align: left;
+  margin: 20px auto 60px auto;
+  padding: 0 20px;
+  max-width: 700px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2;
+}
+
+#intro-completo blockquote {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #1E3A8A;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+#intro-completo blockquote footer {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #999999;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+}
+
+#intro-completo .curve-line {
+  width: 100%;
+  height: 2px;
+  margin: 2.2rem auto;
+  background: #CCCCCC;
+  border-radius: 2px;
+}
+
+#intro-completo h1 {
+  font-size: 1.8rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+#intro-completo .scroll-indicator {
+  font-family: 'Inter', sans-serif;
+  margin: 3rem 0;
+  font-size: 1.3rem;
+  color: #666;
+  text-align: center;
+}
+
+#intro-completo h2 {
+  font-size: 1.8rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+#intro-completo p {
+  font-size: 1.3rem;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: #000000;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#intro-completo .imagen {
+  flex: 1;
+  max-width: 700px;
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+#intro-completo .imagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+#intro-completo h6 {
+  font-style: normal;
+  text-align: left;
+  font-weight: 200;
+  font-size: 0.8rem;
+  color: #999999;
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
+.scroll-container {
+  height: 400vh; /* espacio para scrollear */
+  position: relative;
+  margin-top: 200px;   /* espacio arriba */
+  margin-bottom: 250px; /* espacio abajo */
+}
+
+.sticky-image {
+  position: sticky;
+  top: 20vh;
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 4 / 5;
+  transform: translate(var(--x, 0px), var(--y, 0px)) rotate(var(--angle, 0deg));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  z-index: var(--z, 1);
+  transition: opacity 0.5s ease;
+}
+
+.texto-similar {
+  text-align: left;
+  margin: 20px auto 60px auto;
+  padding: 0 20px;
+  max-width: 700px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2;
+  font-family: "PT Serif", serif;
+  font-weight: 500;
+  color: #000000;
+}
+
+.texto-similar p {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.texto-similar h3 {
+  font-size: 1.8rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: #ffffff;
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+}
+.autores {
+  position: absolute;
+  top: 220px; /* ajustá según el top del título */
+  left: 722px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: white;
+  font-size: 1.2rem;
+  margin: 0;
+  z-index: 10;
+}
+section {
+  padding: 3rem 2rem;
+  background: #ffffff;
+}
+
+.step {
+  background: #E6F0FA;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-left: 5px solid #1E3A8A;
+}
+
+.step.active {
+  background: #dceeff;
+  transform: scale(1.02);
+}
+
+.viz-placeholder {
+  width: 100%;
+  height: 300px;
+  background: #dddddd;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #555;
+}
+
+.background-animation {
+  display: none; /* desactivado */
+}
+
+.intro-overlay {
+  text-align: center;
+  padding: 2rem;
+  max-width: 700px;
+}
+
+
+#date-progress-bar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000000;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  z-index: 9999;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+}
+
+#date-progress-bar:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+#current-date {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#map {
+  width: 100%;
+  height: 200vh;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+#map-caption {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  border-left: 5px solid #1E3A8A;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 320px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1s ease, transform 1s ease;
+  z-index: 2;
+}
+
+#map-caption.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+.flourish-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+.flourish-credit {
+    display: none !important;
+}
+
+.fl-scrolly-step {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  color: #000000 !important;
+  max-width: 400px !important;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+}
+.fl-scrolly-step span {
+    color: cadetblue;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+    display: block;
+}
+.fl-scrolly-step span.conFondo {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0px 7px;
+    display: unset;
+}
+.fl-scrolly-step.recto{
+    border-radius: 0 !important;
+}
+.fl-scrolly-step.recto.izq{
+    transform: translate3d(-100%,0,0) !important;
+    background-color: rgba(200, 0, 0, 0.7) !important;
+}
+.fl-scrolly-step.recto.izq span{
+    color: white !important;
+}
+.fl-scrolly-step.recto.izq iframe{
+    margin: auto;
+    height: 300px !important;
+}
+.fl-scrolly-section .fl-scrolly-step.der{
+    transform: translate3d(100%,0,0) !important;
+    /* height: 80vh !important; */
+}
+.fl-scrolly-section .fl-scrolly-step.der img{
+    margin: 20px auto 0px;
+}
+/* Tipografía recomendada: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.hero-profesional {
+  position: relative;
+  height: 100vh;
+  background: url('covid.jpg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* oscurece fondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  background: rgba(255, 255, 255, 0.85); /* bloque blanco translúcido */
+  padding: 2.5rem 2rem;
+  max-width: 700px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.hero-content h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.hero-content h1 strong {
+  color: #1e3a8a;
+}
+
+.hero-content blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #333333;
+  margin: 1.5rem 0 0.5rem 0;
+  line-height: 1.6;
+}
+
+.hero-content .autor {
+  font-size: 0.95rem;
+  color: #666666;
+  margin-top: 0.5rem;
+}
+
+.espaciado {
+  height: 3rem; /* o 30px, o lo que quieras */
+}

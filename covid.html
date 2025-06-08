@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>COVID-19: Una historia visual</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+<body>
+  <div class="hero-profesional">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>El mundo en pausa:<br><span>La historia del <strong>COVID-19</strong></span></h1>
+        <blockquote>“No estamos solo luchando contra un virus, sino contra la desinformación, el miedo y la división.”</blockquote>
+        <p class="autor">Tedros Adhanom Ghebreyesus, Director General de la OMS</p>
+      </div>
+    </div>
+  </div>
+  
+<section id="intro-completo">
+  <div class="intro-overlay">
+    
+
+    <hr />
+
+    
+
+    <h1>COVID-19: Una línea en el tiempo<br> que lo cambió todo</h1>
+    <p>Desde la primera noticia hasta el primer abrazo post pandemia, este recorrido visual busca capturar la transformación global que trajo el virus.</p>
+
+
+    <h2>El inicio de una era pandémica</h2>
+
+    <div class="imagen">
+      <img src="./temperatura.jpg" alt="Temperatura corporal durante la pandemia">
+      <h6>Foto: IL3 - Universitat de Barcelona</h6>
+    </div>
+
+    <p>En 2019, el mundo se vio sorprendido por la aparición de un nuevo virus hasta entonces desconocido. En cuestión de semanas, lo que parecía ser un brote aislado comenzó a escalar de forma vertiginosa, alcanzando cifras alarmantes de contagios y muertes. Hasta ese momento, las pandemias eran vistas como eventos del pasado o situaciones de impacto acotado, como ocurrió con la gripe AH1N1. Sin embargo, la llegada de la COVID-19 desafió esa percepción, desatando una crisis sanitaria, social y económica sin precedentes. </p>
+
+    <p>La propagación del virus puso a prueba la preparación de los sistemas de salud a nivel global, evidenciando desigualdades profundas entre países y regiones. Al mismo tiempo, demostró el rol crucial de los profesionales de la salud, quienes estuvieron en la primera línea de respuesta ante un escenario incierto y cambiante. </p>
+
+    <p>A pesar del avance científico sin precedentes en la comprensión del virus, su origen exacto continúa siendo motivo de debate. Diversas teorías han circulado en la comunidad científica, desde un salto natural entre especies hasta la posibilidad de un accidente en laboratorio. Aún hoy, algunas preguntas siguen sin respuesta. </p>
+
+    <p>Para entender mejor el inicio de esta pandemia que marcó a toda una generación, es fundamental retroceder a los primeros registros del brote. </p>
+  </div>
+</section>
+
+
+  <div id="date-progress-bar">
+    <span id="current-date">01/03/2020</span>
+  </div>
+    <!-- MAPA CHINA --> 
+  <div id="my-wrapper">
+    <div
+      class="flourish-embed"
+      data-src="story/3150249"
+      data-url="https://flo.uri.sh/story/3150249/embed"
+      data-height="100vh"
+    >
+      <script src="https://public.flourish.studio/resources/embed.js"></script>
+    </div>
+  
+    <!-- Slide 2: Mantener el iframe, quitar el texto -->
+    <div class="recto izq">
+      <iframe scrolling="no" frameborder="0" title="Interactive or visual content"
+        sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
+        src="https://flo.uri.sh/story3150249/embed?auto=1"
+        style="width: 100%; height:300px !important;"></iframe>
+      <!-- <a href="#story/3150249/slide-2"></a> -->
+    </div>
+  
+    <!-- Slide 3: Único texto visible -->
+    <p>
+      <span>Wuhan, China — donde comenzó todo.</span>
+  <span class="conFondo">El primer caso registrado marcó el inicio de una nueva era</span>
+  
+      <a href="#story/3150249/slide-3"></a>
+    </p>
+  </div>
+  
+<div class="espaciado"></div> 
+<div class="scroll-container">
+  <div class="sticky-image" style="--img:url('noticia.jpg'); --x:-200px; --y:-20px; --angle:-5deg;"></div>
+  <div class="sticky-image" style="--img:url('noticia.jpg'); --x:250px; --y:-15px; --angle:4deg;"></div>
+  <div class="sticky-image" style="--img:url('noticia.jpg'); --x:-180px; --y:-50px; --angle:-2deg;"></div>
+  <div class="sticky-image" style="--img:url('noticia.jpg'); --x:150px; --y:0px; --angle:3deg;"></div>
+  <div class="sticky-image" style="--img:url('noticia.jpg'); --x:-100px; --y:80px; --angle:-1deg;"></div>
+  <div class="sticky-image" style="--img:url('noticia.jpg'); --x:200px; --y:15px; --angle:2deg;"></div>
+  <div class="sticky-image" style="--img:url('noticia.jpg'); --x:-250px; --y:10px; --angle:1deg;"></div>
+</div>
+
+<section class="texto-similar">
+  <h3>Cuarentena</h3>
+  <p>Este es el texto nuevo que sigue después de las noticias.</p>
+  <p>Podes usar varios párrafos y mantener el mismo diseño que arriba.</p>
+  <p>Recordá que el contenedor tiene un ancho máximo, padding, márgenes y tipografía similares.</p>
+</section>
+
+  
+
+   
+  <footer>
+    <p>Autores: Lara Kesler, Paloma Raijman, Anna Abad · Universidad Torcuato Di Tella · Visualización de Datos</p>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000,
+    easing: 'ease-out',
+  });
+</script>
+
+  <script src="script.js"></script>
+     <!-- Agregar la libreria (antes de tu javascript) que hara posible el paso de los textos al scrollear -->
+    <script src="https://cdn.flourish.rocks/flourish-scrolly-v3.1.0.min.js" type="text/javascript"></script>
+    <!-- En este index.js esta el javascript para activar los botones de los videos de Messi -->
+    <script src="index.js"></script>
+    <!-- En este slider.js este el javascript para activar el swipe izquierda/derecha en mobile. Para verlo achicar la pantalla a menos de 600px -->
+    <script src="slider.js"></script>
+    <!-- Inicializa la biblioteca para convertir tu historia en magia de desplazamiento -->
+    <script type="text/javascript">initFlourishScrolly()</script>
+</body>
+</html>
