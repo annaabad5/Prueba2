@@ -296,6 +296,166 @@ footer {
   padding: 2rem;
   text-align: center;
 }
+
+.flourish-texts-section {
+  padding: 3rem 2rem;
+  background: #fff;
+}
+
+.container-flourish-texts {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.flourish-left {
+  flex: 0 0 650px;  /* ancho fijo para iframe */
+  position: sticky;
+  top: 10vh;
+  height: 90vh;
+  margin-left: -150px; /* lo llevo más a la izquierda, fuera del contenedor */
+  z-index: 2; /* para que esté encima si hace falta */
+}
+
+.flourish-left iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  border-radius: 12px;
+
+}
+
+.texts-right {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.9rem; /* texto más grande */
+  color: #222;
+  max-width: 550px;
+  z-index: 1;
+}
+
+.texts-right p {
+  background: rgba(255 255 255 / 0.95);
+  padding: 1.8rem 2.2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.texts-right p span.highlight {
+  color: cadetblue;
+  font-weight: 800;
+  font-size: 2.1rem;
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+#casos-mundiales {
+  text-align: left;
+  margin: 40px auto 80px auto;
+  padding: 0 20px;
+  max-width: 800px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  line-height: 2;
+  color: #000000;
+}
+
+#casos-mundiales h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+#casos-mundiales p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+#casos-mundiales img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+#casos-mundiales h6 {
+  font-style: normal;
+  text-align: left;
+  font-weight: 200;
+  font-size: 0.8rem;
+  color: #999999;
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
+#primera-vacuna {
+  padding: 4rem 2rem;
+  background: #ffffff;
+  color: #000000;
+  text-align: left;
+}
+
+#primera-vacuna .cover-box {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  text-align: left;
+}
+
+.grafico-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.grafico-container h3 {
+  font-size: 1.6rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.responsive-chart {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#primera-vacuna h1,
+#primera-vacuna h2 {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: black;
+  text-align: left;
+}
+
+
+
 .autores {
   position: absolute;
   top: 220px; /* ajustá según el top del título */
