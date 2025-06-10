@@ -276,6 +276,10 @@ h1 {
 
 .texto-similar p {
   font-size: 1.3rem;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: #000000;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -420,6 +424,16 @@ footer {
   max-width: 800px;
   margin: 0 auto 3rem auto;
   text-align: left;
+}
+
+#primera-vacuna p{
+  font-size: 1.3rem;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: #000000;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .grafico-container {
@@ -737,16 +751,12 @@ section {
   height: 97vh;
 }
 
-hr{
-  margin: 70px 0;       /* 70px arriba y abajo, 0 a los lados */
-  width: 200px;         /* Podés ajustar el ancho */
-  border: 1px solid #003F5C;  /* Opcional: color y grosor */
-}
+
 
 .etiqueta-dia {
   font-size: 2.5rem;
   font-weight: bold;
-  border-bottom: 4px solid #f26522; /* línea naranja */
+  border-bottom: 4px solid #1e3a8a; /* línea naranja */
   padding-bottom: 5px;
   display: inline-block;
   color: #111;
