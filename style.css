@@ -292,7 +292,7 @@ h1 {
 
 footer {
   background: #ffffff;
-  color: #ffffff;
+  color: #000000;
   padding: 2rem;
   text-align: center;
 }
@@ -305,20 +305,45 @@ footer {
 .container-flourish-texts {
   display: flex;
   align-items: flex-start;
-  gap: 3rem;
-  max-width: 1200px;
+  gap: 2rem;
+  max-width: 1100px;   /* Un poco más ancho para la foto */
   margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
   position: relative;
 }
 
 .flourish-left {
-  flex: 0 0 650px;  /* ancho fijo para iframe */
+  flex: 0 0 700px;    /* Foto más ancha */
   position: sticky;
   top: 10vh;
-  height: 90vh;
-  margin-left: -150px; /* lo llevo más a la izquierda, fuera del contenedor */
-  z-index: 2; /* para que esté encima si hace falta */
+  height: 80vh;       /* Altura controlada */
+  margin-left: 0;
+  z-index: 2;
 }
+
+.texts-right {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;            /* espacio entre cajas de texto */
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;    /* tamaño de texto más compacto */
+  color: #222;
+  max-width: 600px;     /* limita el ancho para que no se estire demasiado */
+  z-index: 1;
+}
+
+.texts-right p {
+  padding: 0.8rem 1.2rem;   /* Menos padding para cajas más pequeñas */
+  font-weight: 600;
+  line-height: 1.4;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  margin: 0;
+  font-size: 1.5rem;  /* Un poco más pequeño para compactar */
+}
+
 
 .flourish-left iframe {
   width: 100%;
@@ -327,28 +352,6 @@ footer {
   display: block;
   border-radius: 12px;
 
-}
-
-.texts-right {
-  flex: 1 1 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 1.9rem; /* texto más grande */
-  color: #222;
-  max-width: 550px;
-  z-index: 1;
-}
-
-.texts-right p {
-  background: rgba(255 255 255 / 0.95);
-  padding: 1.8rem 2.2rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-  font-weight: 600;
-  line-height: 1.6;
-  margin: 0;
 }
 
 .texts-right p span.highlight {
