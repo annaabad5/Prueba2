@@ -240,7 +240,7 @@ h1 {
   height: 400vh; /* espacio para scrollear */
   position: relative;
   margin-top: 200px;   /* espacio arriba */
-  margin-bottom: 250px; /* espacio abajo */
+  margin-bottom: 200px; /* espacio abajo */
 }
 
 .sticky-image {
@@ -299,63 +299,6 @@ footer {
   color: #000000;
   padding: 2rem;
   text-align: center;
-}
-
-.flourish-texts-section {
-  padding: 3rem 2rem;
-  background: #fff;
-}
-
-.container-flourish-texts {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  max-width: 1100px;   /* Un poco más ancho para la foto */
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
-  position: relative;
-}
-
-.flourish-left {
-  flex: 0 0 700px;    /* Foto más ancha */
-  position: sticky;
-  top: 10vh;
-  height: 80vh;       /* Altura controlada */
-  margin-left: 0;
-  z-index: 2;
-}
-
-.texts-right {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;            /* espacio entre cajas de texto */
-  font-family: 'Inter', sans-serif;
-  font-size: 1.6rem;    /* tamaño de texto más compacto */
-  color: #222;
-  max-width: 600px;     /* limita el ancho para que no se estire demasiado */
-  z-index: 1;
-}
-
-.texts-right p {
-  padding: 0.8rem 1.2rem;   /* Menos padding para cajas más pequeñas */
-  font-weight: 600;
-  line-height: 1.4;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-  margin: 0;
-  font-size: 1.5rem;  /* Un poco más pequeño para compactar */
-}
-
-
-.flourish-left iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-  border-radius: 12px;
-
 }
 
 .texts-right p span.highlight {
@@ -473,19 +416,35 @@ footer {
 
 
 #fuentes {
-  background-color: #1E3A8A; /* Azul fuerte */
+  position: relative;
+  background-color: #1E3A8A; /* Azul fuerte base */
   padding: 3rem 1.5rem;
   color: white;
   font-family: 'Inter', sans-serif;
+  overflow: hidden; /* para que no se desborde el ::before */
+}
+
+#fuentes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3); /* oscurecimiento suave */
+  z-index: 0;
 }
 
 .fuentes-box {
   max-width: 1000px;
   margin: auto;
-  background-color: #1E3A8A;
   padding: 2rem;
   border-radius: 12px;
+  position: relative;
+  z-index: 1; /* se asegura de quedar encima del fondo oscurecido */
+  background: none; /* quitamos el azul fuerte duplicado */
 }
+
 
 #fuentes h3 {
   font-size: 1.8rem;
@@ -702,7 +661,9 @@ section {
   background: rgba(0, 0, 0, 0.5); /* oscurece fondo */
   display: flex; 
   justify-content: center;
+  align-items: center; 
 }
+
 
 .hero-content {
   background: rgba(255, 255, 255, 0.85); /* bloque blanco translúcido */
@@ -774,15 +735,6 @@ section {
   padding: 40px;
 }
 
-.contenedor-comparador-vertical {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  max-width: 600px;
-  margin-bottom: 60px; /* 🔹 espacio entre bloques */
-}
-
 .comparador {
   position: relative;
   width: 600px;
@@ -816,23 +768,21 @@ section {
 }
 
 .texto {
-  color: #003F5C;
+  color: #1e3a8a;
   font-size: 16px;
 }
 .descripcion-antes-desp {
   background-color: #e0f4ff;
   padding: 12px 16px;
-  margin-top: 10px;
+  margin-top: 0%;
+  margin-bottom: 50px;
   border-radius: 6px;
   font-size: 14px;
-  color: #003F5C;
-  width: 100%;
-  box-sizing: border-box;
+  color: #1e3a8a;
   width: 600px;
-  margin-bottom: 50px;
-  margin-top: 0%;
-  
+  box-sizing: border-box;
 }
+
 
 .descripcion-antes-desp strong {
   display: block;
@@ -845,12 +795,7 @@ section {
   font-size: 13px;
   color: #444;
 }
-.contenedor-imagen-y-subtitulo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 600px;
-}
+
 .layout-scroll {
   display: flex;
   gap: 60px;
@@ -861,19 +806,57 @@ section {
 .caja-lateral-fija {
   position: sticky;
   top: 100px;
-  width: 320px;
+  width: 90%;         /* ancho relativo para no pasar el margen */
+  max-width: 450px;   /* ancho máximo fijo */
+  padding: 20px;
+  height: 650px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto; 
+  flex-shrink: 0;
+  margin-left: 0;     /* sin margen negativo para que no se salga */
   background-color: #e0f4ff;
-  padding: 24px;
-  border-radius: 10px;
-  font-size: 15px;
-  line-height: 1.6;
-  color: #003F5C;
-  height: fit-content;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: none;
+  text-align: left;
+  border-radius: 15px;
+  box-sizing: border-box; /* importante para que padding no expanda ancho */
+  
 }
 
-.contenedor-general-vertical {
-  flex: 1;
+.caja-lateral-fija h3 {
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #1e3a8a;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 2;
+}
+.caja-lateral-fija p {
+  font-size: 1rem;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: #000000;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 2;
+}
+
+
+.layout-dos-columnas {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.columna-fotos {
   display: flex;
   flex-direction: column;
 }
