@@ -860,3 +860,56 @@ section {
   display: flex;
   flex-direction: column;
 }
+
+
+.sacar-caja{
+  box-shadow: none !important;
+  background-color: transparent !important
+}
+
+.timeline-container {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  padding: 3rem 2rem;
+  border-top: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+}
+
+.timeline {
+  display: flex;
+  gap: 120px;
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.event {
+  scroll-snap-align: center;
+  text-align: center;
+  position: relative;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  transform: scale(0.8);
+  opacity: 0.6;
+}
+
+.circle.active {
+  background-color: #1e3a8a;
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.event p {
+  margin-top: 0.5rem;
+  font-size: 14px;
+}

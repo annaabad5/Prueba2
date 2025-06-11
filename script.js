@@ -72,5 +72,22 @@ const map = L.map('map', {
       }
     }
   });
-  
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const circle = entry.target.querySelector('.circle');
+    if (entry.isIntersecting) {
+      circle.classList.add('active');
+    } else {
+      circle.classList.remove('active');
+    }
+  });
+}, {
+  root: document.querySelector('.timeline-container'),
+  threshold: 0.6
+});
+
+document.querySelectorAll('.event').forEach(event => {
+  observer.observe(event);
+});
+
   
